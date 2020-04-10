@@ -1,0 +1,6 @@
+package com.spring.apps.controller;
+
+@RestController
+public class HelloController {
+
+}
