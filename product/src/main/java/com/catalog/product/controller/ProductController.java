@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
+@RequestMapping(path="/")
 public class ProductController  {
     @Autowired
     private ProductService service;
