@@ -23,7 +23,7 @@ public class ProductController  {
         List<Product> listProducts=service.listAll();
         model.addAttribute("listProducts",listProducts);
 
-        return "index";
+        return "products";
 
     }
 
