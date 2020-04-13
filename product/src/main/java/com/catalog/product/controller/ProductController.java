@@ -16,8 +16,6 @@ public class ProductController  {
     @Autowired
     private ProductService service;
 
-
-    @RequestMapping("/")
     @GetMapping("/products")
     public String viewHomePage(Model model){
         List<Product> listProducts=service.listAll();
