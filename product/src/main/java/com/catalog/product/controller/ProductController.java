@@ -12,13 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping(path="/")
 public class ProductController  {
     @Autowired
     private ProductService service;
 
+    @GetMapping("/")
+    public String viewHomePage(){
+        return "index";
+    }
+
     @GetMapping("/products")
-    public String viewHomePage(Model model){
+    public String viewProductsPage(Model model){
         List<Product> listProducts=service.listAll();
         model.addAttribute("listProducts",listProducts);
 
