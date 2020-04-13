@@ -18,6 +18,7 @@ public class ProductController  {
 
 
     @RequestMapping("/")
+    @GetMapping("/products")
     public String viewHomePage(Model model){
         List<Product> listProducts=service.listAll();
         model.addAttribute("listProducts",listProducts);
