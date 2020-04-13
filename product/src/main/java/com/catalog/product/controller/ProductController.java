@@ -18,18 +18,13 @@ public class ProductController  {
     private ProductService service;
 
 
-    @GetMapping("/welcome")
-    public String welcomePage(){
 
-        return "index";
-
-    }
-    @GetMapping("path=/products")
+    @GetMapping("path=/")
     public String viewHomePage(Model model){
         List<Product> listProducts=service.listAll();
         model.addAttribute("listProducts",listProducts);
 
-        return "Hello";
+        return "products";
 
     }
 
