@@ -11,10 +11,8 @@ public class Product {
     private String brand;
     private String madein;
     private float price;
-
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
     }
