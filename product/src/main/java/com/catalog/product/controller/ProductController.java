@@ -52,4 +52,10 @@ public class ProductController  {
 
         return mav;
     }
+    @GetMapping("/delete/{id}")
+    public String deleteProduct(@PathVariable(name = "id") int id) {
+        service.delete(id);
+        return "redirect:/products";
+    }
+
 }
