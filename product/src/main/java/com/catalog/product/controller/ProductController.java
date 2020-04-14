@@ -41,7 +41,7 @@ public class ProductController  {
     public String saveProduct(@ModelAttribute("product") Product product) {
         service.save(product);
 
-        return "redirect:/";
+        return "redirect:/products";
     }
 
     @GetMapping("/edit/{id}")
