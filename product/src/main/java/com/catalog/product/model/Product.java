@@ -1,6 +1,8 @@
 package com.catalog.product.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "product")
@@ -9,6 +11,8 @@ public class Product {
     private Long id;
     private String name;
     private String brand;
+    @NotNull
+    @Size(min=2, max=30)
     private String madein;
     private float price;
     @Id
