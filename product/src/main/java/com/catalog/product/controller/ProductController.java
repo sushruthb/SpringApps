@@ -42,10 +42,13 @@ public class ProductController  {
     @PostMapping("/save")
     public String saveProduct(@ModelAttribute("product") @Valid Product product, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            service.save(product);
-            return "redirect:/new_product";
+               return "redirect:/new_product";
         }
-        return "redirect:/products";
+        else{
+            service.save(product);
+            return "redirect:/products";
+        }
+
     }
 
     @GetMapping("/edit/{id}")
