@@ -12,7 +12,7 @@ public class DemoController
     {
         return"index1";
     }
-    @PostMapping("/save")
+    @PostMapping("/savedata")
     public ModelAndView save(@ModelAttribute User user)
     {
         ModelAndView modelAndView = new ModelAndView();
