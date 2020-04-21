@@ -31,6 +31,14 @@ public class ProductController  {
         return "products";
 
     }
+    @GetMapping("/productsid")
+    public Long viewProductsId(Model model,Long id){
+        Product productsid=service.get(id);
+        model.addAttribute("listProducts",productsid);
+
+        return productsid;
+
+    }
     @GetMapping("/new")
     public String showNewProductPage(Model model) {
         Product product = new Product();
