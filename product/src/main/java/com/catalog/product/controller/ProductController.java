@@ -19,7 +19,8 @@ public class ProductController  {
     private ProductService service;
 
     @GetMapping("/")
-    public String viewHomePage(){
+    public String viewHomePage(Model model){
+        model.addAttribute("productName","Products");
         return "index";
     }
 
