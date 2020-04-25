@@ -1,6 +1,7 @@
 package com.catalog.product.controller;
 
 import com.catalog.product.model.User;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -19,5 +20,13 @@ public class DemoController
         modelAndView.setViewName("user-data");
         modelAndView.addObject("user", user);
         return modelAndView;
+    }
+
+    public class vueController {
+        @GetMapping("/vue")
+        public String index(Model model) {
+            model.addAttribute("eventName", "FIFA 2018");
+            return "vueindex";
+        }
     }
 }

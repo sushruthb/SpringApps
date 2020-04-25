@@ -17,11 +17,9 @@ public class ProductService {
     public List<Product> listAll() {
         return repo.findAll();
     }
-
     public void save(Product product){
         repo.save(product);
     }
-
     public Product get(long id){
         return repo.findById(id).get();
     }
