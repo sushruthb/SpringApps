@@ -18,7 +18,7 @@ public class ProductController  {
     @Autowired
     private ProductService service;
 
-    @GetMapping("/")
+    @GetMapping("/index")
     public String viewHomePage(Model model){
         model.addAttribute("productName","Products");
         return "index";
