@@ -12,16 +12,28 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class ProductController  {
     @Autowired
     private ProductService service;
 
-    @GetMapping("/")
-    public String loginPage(){
+    @GetMapping(value = "/")
+    public String viewLogin() {
 
         return "login";
+    }
+
+    @PostMapping(value = "/login")
+    public String doLogin(@Valid @ModelAttribute("login")
+                                      BindingResult result, Map<String, Object> model) {
+
+        if (result.hasErrors()) {
+            return "login";
+        }
+
+        return "products";
     }
 
     @GetMapping("/index")
