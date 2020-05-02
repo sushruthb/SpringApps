@@ -19,8 +19,8 @@ public class ProductController  {
     private ProductService service;
 
     @GetMapping("/")
-    public String loginPage(Model model){
-        model.addAttribute("","login");
+    public String loginPage(){
+
         return "login";
     }
 
