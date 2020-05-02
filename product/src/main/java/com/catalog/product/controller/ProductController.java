@@ -25,7 +25,7 @@ public class ProductController  {
         return "login";
     }
 
-    @PostMapping(value = "/login")
+    @PostMapping(value = "/")
     public String doLogin(@Valid @ModelAttribute("login")
                                       BindingResult result, Map<String, Object> model) {
 
