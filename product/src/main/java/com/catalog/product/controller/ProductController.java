@@ -18,6 +18,12 @@ public class ProductController  {
     @Autowired
     private ProductService service;
 
+    @GetMapping("/")
+    public String loginPage(Model model){
+        model.addAttribute("","login");
+        return "login";
+    }
+
     @GetMapping("/index")
     public String viewHomePage(Model model){
         model.addAttribute("productName","Products");
