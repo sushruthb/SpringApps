@@ -1,7 +1,7 @@
 package com.ui.withjs.datafeed;
 
 import com.ui.withjs.repository.EmployeeRepository;
-import model.Employee;
+import com.ui.withjs.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
