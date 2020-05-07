@@ -15,6 +15,9 @@ public class Employee {
     private String description;
 
     public Employee(String frodo, String baggins, String ring_bearer) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.description = description;
     }
 
     @Override
