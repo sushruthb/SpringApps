@@ -1,34 +1,26 @@
-'use strict';
-
-// tag::vars[]
-const React = require('react'); // <1>
-const ReactDOM = require('react-dom'); // <2>
-const client = require('./client'); // <3>
-// end::vars[]
-
-// tag::app[]
-class App extends React.Component { // <1>
+const React = require('react');
+const ReactDOM = require('react-dom');
+const client = require('./client');
+class App extends React.Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {employees: []};
 	}
 
-	componentDidMount() { // <2>
+	componentDidMount() {
 		client({method: 'GET', path: '/api/employees'}).done(response => {
 			this.setState({employees: response.entity._embedded.employees});
 		});
 	}
 
-	render() { // <3>
+	render() {
 		return (
 			<EmployeeList employees={this.state.employees}/>
 		)
 	}
 }
-// end::app[]
 
-// tag::employee-list[]
 class EmployeeList extends React.Component{
 	render() {
 		const employees = this.props.employees.map(employee =>
@@ -48,7 +40,6 @@ class EmployeeList extends React.Component{
 		)
 	}
 }
-// end::employee-list[]
 
 // tag::employee[]
 class Employee extends React.Component{
