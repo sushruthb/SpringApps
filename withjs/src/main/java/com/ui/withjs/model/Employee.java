@@ -13,7 +13,7 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String description;
-
+    private Employee() {}
     public Employee(String frodo, String baggins, String ring_bearer) {
         this.firstName = firstName;
         this.lastName = lastName;
