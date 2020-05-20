@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="lead">
+    <strong>Name of Event:</strong>
+    <span th:text="${eventName}"></span>
+</div>
+
+<script type="text/babel">
+    var app = new Vue({
+        el: '#contents',
+        data: {
+            players: [
+                { id: "1",
+                  name: "Lionel Messi",
+                  description: "Argentina's superstar" },
+                { id: "2",
+                  name: "Christiano Ronaldo",
+                  description: "World #1-ranked player from Portugal" }
+            ]
+        }
+    });
+</script>
+</body>
+<script
+        src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js">
+</script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js">
+</script>
+</html>
