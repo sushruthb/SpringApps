@@ -2,15 +2,17 @@ package com.backend.services.controllers;
 
 public class HelloWorldBean {
     private String message;
+
     public HelloWorldBean(String message) {
-        this.message=message;
+        this.message = message;
+
     }
 
-    public String getStr() {
+    public String getMessage() {
         return message;
     }
 
-    public void setStr(String str) {
+    public void setMessage(String message) {
         this.message = message;
     }
 
@@ -21,3 +23,5 @@ public class HelloWorldBean {
                 '}';
     }
 }
+
+
