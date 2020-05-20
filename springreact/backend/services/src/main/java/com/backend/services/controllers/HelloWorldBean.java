@@ -1,7 +1,7 @@
 package com.backend.services.controllers;
 
 public class HelloWorldBean {
-    String message;
+    private String message;
     public HelloWorldBean(String message) {
         this.message=message;
     }
