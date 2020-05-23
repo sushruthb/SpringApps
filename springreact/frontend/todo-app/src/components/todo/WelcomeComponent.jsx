@@ -14,6 +14,7 @@ class WelcomeComponent extends Component{
         }
 
         this.handleSucessfulResponse=this.handleSucessfulResponse.bind(this)
+        this.handleError=this.handleError.bind(this)
     }
     render(){
         return (
@@ -36,15 +37,32 @@ class WelcomeComponent extends Component{
     }
 
     retrieveWelcomeMessage(){
-        HelloWorldService.executeHelloWorldService()
-            .then(response => this.handleSucessfulResponse(response))
+       // HelloWorldService.executeHelloWorldService()
+      //      .then(response => this.handleSucessfulResponse(response))
         //return Axios.get('http://10.76.110.207:6262/')
+
+     //   HelloWorldService.executeHelloWorldBeanService()
+     //   .then(response => this.handleSucessfulResponse(response))
+       
+        HelloWorldService.executeHelloWorldBeanPathVariableService(this.props.match.params.name)
+        .then(response => this.handleSucessfulResponse(response))
+        .catch(error => this.handleError(error))
+
+
     }
 
     handleSucessfulResponse(response){
-        this.setState({welcomeMessage: response.data })
-        
+        console.log(response)
+        this.setState({welcomeMessage: response.data.message})
+                
     }
+
+    handleError(error){
+        console.log(error.response)
+       // this.setState({welcomeMessage: response.data.message})
+                
+    }
+
 }
 
 export default WelcomeComponent
