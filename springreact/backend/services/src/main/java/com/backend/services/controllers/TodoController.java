@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-@CrossOrigin(origins = "http://10.98.150.174:4200")
+@CrossOrigin(origins = "*")
 @RestController
 public class TodoController {
 
