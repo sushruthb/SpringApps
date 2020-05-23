@@ -21,4 +21,23 @@ public class TodoService {
     public List<Todo> findAll(){
         return todos;
     }
+
+    public Todo deleteById(int id){
+        Todo todo=findByid(id);
+        if (todo==null) return null;
+
+        if(todos.remove(todo)) {
+            todos.remove(todo);
+        }
+        return null;
+    }
+
+    public Todo findByid(int id) {
+        for (Todo todo : todos) {
+            if (todo.getId() == id) {
+                return todo;
+            }
+        }
+        return null;
+    }
 }

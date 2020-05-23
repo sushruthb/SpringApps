@@ -4,7 +4,9 @@ import TodoDataService from '../../api/todo/TodoDataService.js'
 
 
 class ListToDosComponent extends Component{
+   
     constructor(props){
+        console.log('constructor')
         super(props)
         this.state ={
             todos :[
@@ -16,18 +18,28 @@ class ListToDosComponent extends Component{
             ] 
         }
     }
+    componentWillUnmount(){
 
+    }
+
+    shouldComponentUpdate(){
+
+        return true
+    }
     componentDidMount(){
+        console.log('Component digmount')
         let username=AuthenticationService.getUserLoggedInUserName
         TodoDataService.retrieveAllTodos(username)
         .then(
             response => {
                 console.log(response)
+                this.setState({todos: response.data})
             }
         )
 
     }
     render(){
+        console.log("renter")
         return (
             <div> 
                 <h1>List Todos</h1>
