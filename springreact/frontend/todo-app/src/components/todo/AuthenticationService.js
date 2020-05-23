@@ -1,4 +1,5 @@
 class AuthenticationService{
+    
     registerSuccessfulLogin(username,password){
 
         sessionStorage.setItem('authenticatedUser',username);
@@ -13,6 +14,13 @@ class AuthenticationService{
         let user = sessionStorage.getItem('authenticatedUser')
         if(user===null) return false
         return true
+    }
+
+    
+    getUserLoggedInUserName(){
+        let user = sessionStorage.getItem('authenticatedUser')
+        if(user===null) return ''
+        return user
     }
 
 }
