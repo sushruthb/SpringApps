@@ -15,8 +15,11 @@ class ListToDosComponent extends Component{
             //    {id: 2, description : 'Learn Spring', done: false, targetDate: new Date()} ,
             //  {id: 3, description : 'Learn Full Stack Development', done: false, targetDate: new Date()} ,
             //    {id: 4, description : 'Learn Spring Microservices', done: false, targetDate: new Date()} 
-            ] 
+            ] ,
+            message : null
         }
+
+        this.deleteTodoClicked=this.deleteTodoClicked.bind(this)
     }
     componentWillUnmount(){
 
@@ -26,9 +29,22 @@ class ListToDosComponent extends Component{
 
         return true
     }
+
+    deleteTodoClicked(id){
+        let username=AuthenticationService.getUserLoggedInUserName()
+        console.log(id + " " + username)
+        TodoDataService.deleteTodo(username,id)
+        .then(
+            response =>{
+                this.setState({message : `Deleted of todo ${id} Successfull`})
+            }
+        )
+
+
+    }
     componentDidMount(){
         console.log('Component digmount')
-        let username=AuthenticationService.getUserLoggedInUserName
+        let username=AuthenticationService.getUserLoggedInUserName()
         TodoDataService.retrieveAllTodos(username)
         .then(
             response => {
@@ -43,6 +59,7 @@ class ListToDosComponent extends Component{
         return (
             <div> 
                 <h1>List Todos</h1>
+                {this.state.message && <div className='alert alert-success'></div>}
                 <div className="container">
                 <table className="table">
                     <thead>
@@ -51,6 +68,7 @@ class ListToDosComponent extends Component{
                             <th>Description</th>
                             <th>IsCompleted</th>
                             <th>TargetDate</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,6 +79,7 @@ class ListToDosComponent extends Component{
                               <td>{todo.description}</td>
                               <td>{todo.done.toString()}</td>
                               <td>{todo.targetDate.toString()}</td>
+                              <td><button className='btn btn-warning' onClick={ ()=> this.deleteTodoClicked(todo.id) }>Delete</button></td>
                             </tr>
                         )
 
