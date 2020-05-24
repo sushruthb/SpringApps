@@ -5,7 +5,7 @@ import com.backend.services.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 
 import java.util.List;
 
@@ -15,7 +15,6 @@ public class TodoController {
 
     @Autowired
     private TodoService todoService;
-    @CrossOrigin(origins = "*")
     @GetMapping("/users/{username}/todos")
     List<Todo> getAllTodos(@PathVariable String username){
         return todoService.findAll();
