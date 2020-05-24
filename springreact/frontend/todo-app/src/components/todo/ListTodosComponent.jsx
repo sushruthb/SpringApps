@@ -37,6 +37,7 @@ class ListToDosComponent extends Component{
         .then(
             response =>{
                 this.setState({message : `Deleted of todo ${id} Successfull`})
+                this.refreshTodos()
             }
         )
 
@@ -44,6 +45,13 @@ class ListToDosComponent extends Component{
     }
     componentDidMount(){
         console.log('Component digmount')
+        this.refreshTodos();
+        console.log(this.state)
+
+    }
+
+    refreshTodos(){
+
         let username=AuthenticationService.getUserLoggedInUserName()
         TodoDataService.retrieveAllTodos(username)
         .then(
