@@ -15,14 +15,14 @@ public class TodoController {
 
     @Autowired
     private TodoService todoService;
-
+    @CrossOrigin(origins = "*")
     @GetMapping("/users/{username}/todos")
     List<Todo> getAllTodos(@PathVariable String username){
         return todoService.findAll();
     }
 
     @DeleteMapping("/users/{username}/todos/{id}")
-    @CrossOrigin(origins = "*")
+
     public ResponseEntity<Void> deleteTodo(@PathVariable String username, @PathVariable int id){
         Todo todo=todoService.deleteById(id);
         if(todo!=null) {
