@@ -22,6 +22,7 @@ public class TodoController {
     }
 
     @DeleteMapping("/users/{username}/todos/{id}")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<Void> deleteTodo(@PathVariable String username, @PathVariable int id){
         Todo todo=todoService.deleteById(id);
         if(todo!=null) {
