@@ -20,9 +20,10 @@ class ListToDosComponent extends Component{
         }
 
         this.deleteTodoClicked=this.deleteTodoClicked.bind(this)
+        this.refreshTodos=this.refreshTodos.bind(this)
     }
     componentWillUnmount(){
-
+        console.log('componentWillUnmount')
     }
 
     shouldComponentUpdate(){
@@ -30,19 +31,7 @@ class ListToDosComponent extends Component{
         return true
     }
 
-    deleteTodoClicked(id){
-        let username=AuthenticationService.getUserLoggedInUserName()
-        console.log(id + " " + username)
-        TodoDataService.deleteTodo(username,id)
-        .then(
-            response =>{
-                this.setState({message : `Deleted of todo ${id} Successfull`})
-                this.refreshTodos()
-            }
-        )
 
-
-    }
     componentDidMount(){
         console.log('Component digmount')
         this.refreshTodos();
@@ -60,6 +49,20 @@ class ListToDosComponent extends Component{
                 this.setState({todos: response.data})
             }
         )
+
+    }
+
+    deleteTodoClicked(id){
+        let username=AuthenticationService.getUserLoggedInUserName()
+        console.log(id + " " + username)
+        TodoDataService.deleteTodo(username,id)
+        .then(
+            response =>{
+                this.setState({message : `Deleted of todo ${id} Successfull`})
+                this.refreshTodos()
+            }
+        )
+
 
     }
     render(){
