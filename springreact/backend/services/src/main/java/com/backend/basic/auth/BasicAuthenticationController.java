@@ -1,4 +1,4 @@
-package com.backend.services.auth;
+package com.backend.basic.auth;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

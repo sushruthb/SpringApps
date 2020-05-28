@@ -1,4 +1,4 @@
-package com.backend.services.auth;
+package com.backend.basic.auth;
 
 public class AuthenticationBean {
 
