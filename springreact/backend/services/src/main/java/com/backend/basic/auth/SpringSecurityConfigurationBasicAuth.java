@@ -1,3 +1,4 @@
+/*
 package com.backend.basic.auth;
 
 import org.springframework.context.annotation.Configuration;
@@ -38,4 +39,4 @@ public class SpringSecurityConfigurationBasicAuth extends WebSecurityConfigurerA
 
     }
 
-}
+}*/
