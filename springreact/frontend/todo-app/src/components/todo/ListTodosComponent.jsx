@@ -33,7 +33,7 @@ class ListToDosComponent extends Component{
 
 
     componentDidMount(){
-        console.log('Component digmount')
+        console.log('Component didmount')
         this.refreshTodos();
         console.log(this.state)
 
@@ -46,7 +46,7 @@ class ListToDosComponent extends Component{
         .then(
             response => {
                 console.log(response)
-                this.setState({todos: response.data})
+                this.setState({ todos: response.data })
             }
         )
 
@@ -57,20 +57,20 @@ class ListToDosComponent extends Component{
         console.log(id + " " + username)
         TodoDataService.deleteTodo(username,id)
         .then(
-            response =>{
-                this.setState({message : `Deleted of todo ${id} Successfull`})
-                this.refreshTodos()
+            response => {
+                this.setState({message : `Deleted of todo ${id} Successfull`});
+                this.refreshTodos();
             }
         )
 
 
     }
     render(){
-        console.log("renter")
+        console.log("render")
         return (
             <div> 
                 <h1>List Todos</h1>
-                {this.state.message && <div class="alert alert-success"></div>}
+                {this.state.message && <div class="alert alert-success">{this.state.message}</div>}
                 <div className="container">
                 <table className="table">
                     <thead>

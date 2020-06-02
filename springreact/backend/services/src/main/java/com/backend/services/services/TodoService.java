@@ -27,7 +27,7 @@ public class TodoService {
         if (todo==null) return null;
 
         if(todos.remove(todo)) {
-            todos.remove(todo);
+           return todo;
         }
         return null;
     }
