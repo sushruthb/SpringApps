@@ -70,7 +70,7 @@ class ListToDosComponent extends Component{
         return (
             <div> 
                 <h1>List Todos</h1>
-                {this.state.message && <div class='alert alert-success'></div>}
+                {this.state.message && <div class="alert alert-success"></div>}
                 <div className="container">
                 <table className="table">
                     <thead>
