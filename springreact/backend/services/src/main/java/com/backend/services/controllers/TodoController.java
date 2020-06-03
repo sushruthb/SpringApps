@@ -20,6 +20,11 @@ public class TodoController {
         return todoService.findAll();
     }
 
+    @GetMapping("/users/{username}/todos/{id}")
+    public Todo getTodo(@PathVariable String username,@PathVariable int id){
+        return todoService.findByid(id);
+    }
+
     @DeleteMapping("/users/{username}/todos/{id}")
     @CrossOrigin
     public ResponseEntity<Void> deleteTodo(@PathVariable String username, @PathVariable int id){
