@@ -8,6 +8,12 @@ class TodoDataService{
         
     }
 
+    retrieveTodo(name,id){
+        console.log('Executed ListTodo Service')
+        return axios.get(`http://10.76.110.207:6262/users/${name}/todos/${id}`)
+
+        
+    }
     deleteTodo(name,id){
         console.log('Executed DeleteTodo Service')
         return axios.delete(`http://10.76.110.207:6262/users/${name}/todos/${id}`)
