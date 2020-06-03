@@ -55,7 +55,7 @@ public class TodoController {
         //{id}
         URI uri= ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(createdTodo.getId()).toUri();
-        return new ResponseEntity<Todo>(todo,HttpStatus.OK);
+        return ResponseEntity.created(uri).build();
 
     }
 
