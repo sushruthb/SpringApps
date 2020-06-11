@@ -19,7 +19,7 @@ public class SpringSecurityConfigurationBasicAuth extends WebSecurityConfigurerA
                 .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
-//.formLogin().and()
+                //.formLogin().and()
                 .httpBasic();
 
     }
