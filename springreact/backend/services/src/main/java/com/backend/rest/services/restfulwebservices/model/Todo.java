@@ -1,4 +1,4 @@
-package com.backend.rest.services.model;
+package com.backend.rest.services.restfulwebservices.model;
 
 import java.util.Date;
 import java.util.Objects;

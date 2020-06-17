@@ -1,4 +1,4 @@
-package com.backend.rest.services;
+package com.backend.rest.services.restfulwebservices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

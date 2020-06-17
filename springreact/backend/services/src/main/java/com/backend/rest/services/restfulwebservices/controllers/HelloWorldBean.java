@@ -1,4 +1,4 @@
-package com.backend.rest.services.controllers;
+package com.backend.rest.services.restfulwebservices.controllers;
 
 public class HelloWorldBean {
     private String message;

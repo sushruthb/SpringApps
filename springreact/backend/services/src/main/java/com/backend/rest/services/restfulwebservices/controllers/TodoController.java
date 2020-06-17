@@ -1,7 +1,7 @@
-package com.backend.rest.services.controllers;
+package com.backend.rest.services.restfulwebservices.controllers;
 
-import com.backend.rest.services.model.Todo;
-import com.backend.rest.services.services.TodoService;
+import com.backend.rest.services.restfulwebservices.model.Todo;
+import com.backend.rest.services.restfulwebservices.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
