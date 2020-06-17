@@ -10,14 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 public class HelloController {
     @GetMapping("/")
-
     public String Hello(){
         return "Hello";
     }
+
     @GetMapping("/hello-world-bean")
     public HelloWorldBean helloWorldBean(){
         return new HelloWorldBean("Hello Bean");
     }
+
+
     @GetMapping("/hello-world-bean/{name}")
     public HelloWorldBean helloWorldBeanPathVariable(@PathVariable String name){
         return new HelloWorldBean(String.format("Hello, %s",name));
