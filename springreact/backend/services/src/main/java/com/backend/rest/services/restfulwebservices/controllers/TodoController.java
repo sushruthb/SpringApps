@@ -12,7 +12,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-@CrossOrigin(origins = {"*","http://localhost:3000"})
+@CrossOrigin(origins = {"*","http://localhost:3000","http://10.52.39.42:3000"})
 @RestController
 public class TodoController {
 
