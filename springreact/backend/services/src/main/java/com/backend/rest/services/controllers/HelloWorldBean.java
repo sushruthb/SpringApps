@@ -1,4 +1,4 @@
-package com.backend.services.controllers;
+package com.backend.rest.services.controllers;
 
 public class HelloWorldBean {
     private String message;

@@ -1,4 +1,4 @@
-package com.backend.services.controllers;
+package com.backend.rest.services.controllers;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

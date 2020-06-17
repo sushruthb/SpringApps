@@ -1,6 +1,6 @@
-package com.backend.services.services;
+package com.backend.rest.services.services;
 
-import com.backend.services.model.Todo;
+import com.backend.rest.services.model.Todo;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
