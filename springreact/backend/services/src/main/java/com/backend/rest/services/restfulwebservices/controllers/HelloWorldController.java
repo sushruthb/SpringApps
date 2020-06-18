@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 //Controller
 @RestController
 @CrossOrigin(origins="http://localhost:3000")
-//
 public class HelloWorldController {
 
     @GetMapping(path = "/hello-world")
@@ -23,7 +22,7 @@ public class HelloWorldController {
     }
 
     ///hello-world/path-variable/in28minutes
-    @GetMapping(path = "/hello-world/{name}")
+    @GetMapping(path = "/hello-world-bean/{name}")
     public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
         //throw new RuntimeException("Something went wrong");
         return new HelloWorldBean(String.format("Hello World, %s", name));
