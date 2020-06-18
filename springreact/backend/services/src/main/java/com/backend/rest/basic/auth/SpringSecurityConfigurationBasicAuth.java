@@ -1,4 +1,4 @@
-package com.backend.rest.services.restfulwebservices;
+package com.backend.rest.basic.auth;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
