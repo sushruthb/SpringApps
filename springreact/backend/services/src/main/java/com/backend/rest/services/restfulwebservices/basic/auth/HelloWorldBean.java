@@ -1,4 +1,4 @@
-package com.backend.rest.services.restfulwebservices.controllers;
+package com.backend.rest.services.restfulwebservices.basic.auth;
 
 public class HelloWorldBean {
     private String message;

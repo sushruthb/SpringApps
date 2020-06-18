@@ -1,4 +1,4 @@
-package com.backend.rest.services.restfulwebservices.controllers;
+package com.backend.rest.services.restfulwebservices.basic.auth;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 //@CrossOrigin(origins = "http://10.98.150.174:4200")
-@CrossOrigin(origins = {"*","http://localhost:3000","http://10.52.39.42:3000"})
+@CrossOrigin(origins = {"http://localhost:3000"})
 public class HelloController {
     @GetMapping("/")
     public String Hello(){
