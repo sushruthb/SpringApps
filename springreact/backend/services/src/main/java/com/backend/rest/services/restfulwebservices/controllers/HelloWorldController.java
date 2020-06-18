@@ -1,6 +1,6 @@
 package com.backend.rest.services.restfulwebservices.controllers;
 
-import com.backend.rest.services.restfulwebservices.basic.auth.HelloWorldBean;
+import com.backend.rest.auth.HelloWorldBean;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
