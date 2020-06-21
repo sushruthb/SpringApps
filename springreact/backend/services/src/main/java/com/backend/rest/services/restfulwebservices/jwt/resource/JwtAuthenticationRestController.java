@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.backend.rest.services.restfulwebservices.jwt.JwtUserDetails;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:3000")
 public class JwtAuthenticationRestController {
 
   @Value("${jwt.http.request.header}")
