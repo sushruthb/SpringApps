@@ -9,19 +9,19 @@ class TodoDataService{
 
     retrieveTodo(name,id){
         console.log('Executed ListTodo Service')
-        return axios.get(`${API_URL}/users/${name}/todos/${id}`);
+        return axios.get(`${JPA_API_URL}/users/${name}/todos/${id}`);
     }
     deleteTodo(name,id){
         console.log('Executed DeleteTodo Service')
-        return axios.delete(`${API_URL}/users/${name}/todos/${id}`);
+        return axios.delete(`${JPA_API_URL}/users/${name}/todos/${id}`);
     }
     updateTodo(name,id,todo){
         console.log('Executed UpdateTodo Service')
-        return axios.put(`${API_URL}/users/${name}/todos/${id}`, todo);
+        return axios.put(`${JPA_API_URL}/users/${name}/todos/${id}`, todo);
     }
     createTodo(name,todo){
         console.log('Executed CreateTodo Service')
-        return axios.post(`${API_URL}/users/${name}/todos/`, todo);
+        return axios.post(`${JPA_API_URL}/users/${name}/todos/`, todo);
     }
 }
 
