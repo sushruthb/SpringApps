@@ -22,7 +22,7 @@ public class TodoJpaController {
 
     @GetMapping("/jpa/users/{username}/todos")
     List<Todo> getAllTodos(@PathVariable String username){
-        return todoRepository.findAll();
+          return todoRepository.findByUsername(username);
     }
 
     @GetMapping("/jpa/users/{username}/todos/{id}")
