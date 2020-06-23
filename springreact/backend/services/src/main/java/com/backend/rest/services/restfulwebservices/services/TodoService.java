@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class TodoService {
     private static List<Todo> todos=new ArrayList();
-    private static int idCounter=0;
+    private static long idCounter=0;
 
     static{
         todos.add(new Todo(++idCounter,"SpringFullStack","ReactJS",new Date(),false));
@@ -36,7 +36,7 @@ public class TodoService {
     }
 
 
-    public Todo deleteById(int id){
+    public Todo deleteById(Long id){
         Todo todo=findByid(id);
         if (todo==null) return null;
 
@@ -46,7 +46,7 @@ public class TodoService {
         return null;
     }
 
-    public Todo findByid(int id) {
+    public Todo findByid(Long id) {
         for (Todo todo : todos) {
             if (todo.getId() == id) {
                 return todo;
