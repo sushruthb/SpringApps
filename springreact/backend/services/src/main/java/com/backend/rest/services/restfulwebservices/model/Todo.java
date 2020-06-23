@@ -10,7 +10,7 @@ import java.util.Objects;
 @Entity
 public class Todo {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long id;
 
     private String username;
