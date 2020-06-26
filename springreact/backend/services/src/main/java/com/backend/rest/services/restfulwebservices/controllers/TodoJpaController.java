@@ -18,11 +18,14 @@ public class TodoJpaController {
 
     @Autowired
     private TodoService todoService;
+
+    @Autowired
     private TodoRepository todoRepository;
 
     @GetMapping("/jpa/users/{username}/todos")
     List<Todo> getAllTodos(@PathVariable String username){
           return todoRepository.findByUsername(username);
+
     }
 
     @GetMapping("/jpa/users/{username}/todos/{id}")
