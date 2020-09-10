@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Set;
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Entity
 @Table(name = "user_group")
 public class Group {
