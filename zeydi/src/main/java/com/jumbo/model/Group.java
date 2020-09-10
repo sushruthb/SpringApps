@@ -1,7 +1,5 @@
 package com.jumbo.model;
 
-
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +27,7 @@ public class Group {
     @OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     private Set<Event> events;
 
-    public Long getId() {
+    /*public Long getId() {
         return id;
-    }
+    }*/
 }
